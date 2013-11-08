@@ -21,7 +21,7 @@ public class OldManOPA {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        JFrame frame = new JFrame("Kaas is vaginale poep");
+        JFrame frame = new JFrame("It is fixed");
         frame.setBounds(800, 100, 500, 100);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
