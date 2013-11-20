@@ -6,10 +6,51 @@
 
 package nl.hmh.OldManOPA.factory;
 
+import nl.hmh.OldManOPA.strategy.*;
+
+import nl.hmh.OldManOPA.model.Node;
+import nl.hmh.OldManOPA.model.INode;
+import nl.hmh.OldManOPA.model.IStrategy;
+import nl.hmh.OldManOPA.model.decorator.INodeConcreteDecorator;
+
 /**
  *
  * @author Pehr
  */
 public class NodeFactory {
-    
+
+	public INode produceNode(String type, boolean value) {
+		IStrategy strategy = null;
+		
+		switch (type.toUpperCase()) {
+			case "INPUT":
+				strategy = new Input();
+				((Input) strategy).setValue(value);
+			break;
+			case "AND":
+				strategy = new AND();
+			break;
+			case "NAND":
+				strategy = new NAND();
+			break;
+			case "OR":
+				strategy = new OR();
+			break;
+			case "NOR":
+				strategy = new NOR();
+			break;
+			case "XOR":
+				strategy = new XOR();
+			break;
+			case "NOT":
+				strategy = new NOT();
+			break;
+			case "PROBE":
+				strategy = new Probe();
+			break;
+		}
+
+		Node node = new Node(strategy);
+		return new INodeConcreteDecorator(node);
+	}
 }
