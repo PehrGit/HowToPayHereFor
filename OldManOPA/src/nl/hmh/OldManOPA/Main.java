@@ -7,6 +7,7 @@
 package nl.hmh.OldManOPA;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.logging.Level;
@@ -23,7 +24,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        FileParser fileParser = new FileParser();
+        FileParser fileParser = FileParser.getInstance();
         
         
         while(true){            
@@ -38,7 +39,9 @@ public class Main {
                     System.exit(0);
                 }
                 else{
-                    Circuit circuit = fileParser.parseFile(s);
+                    File f = new File(s);
+                    if(f.exists() && !f.isDirectory()) { /* do something */ }
+                    Circuit circuit = fileParser.parseFile(f);
                     circuit.startCircuit();
                 }
             } catch (IOException ex) {
