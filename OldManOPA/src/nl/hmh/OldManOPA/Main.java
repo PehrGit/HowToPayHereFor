@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import nl.hmh.OldManOPA.data.FileParser;
+import nl.hmh.OldManOPA.model.Circuit;
 
 /**
  *
@@ -21,15 +23,23 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        FileParser fileParser = new FileParser();
+        
+        
         while(true){            
             BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
             try {
-                String s = bufferRead.readLine();
-                System.out.println("you typed: " + s);
+                System.out.println("Geef path van bestand");
                 
+                String s = bufferRead.readLine();
+
                 if(s.equals("exit")){
                     System.out.println("Goodbye");
                     System.exit(0);
+                }
+                else{
+                    Circuit circuit = fileParser.parseFile(s);
+                    circuit.startCircuit();
                 }
             } catch (IOException ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
