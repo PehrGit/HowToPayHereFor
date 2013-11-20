@@ -26,7 +26,9 @@ public class INodeConcreteDecorator extends INodeDecorator {
     
     @Override
     public boolean calculate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this.component.calculate())
+            return true;
+        return false;
     }
     
 }

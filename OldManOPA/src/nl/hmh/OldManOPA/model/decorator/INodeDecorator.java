@@ -23,16 +23,18 @@ public class INodeDecorator implements INode{
     
     @Override
     public boolean calculate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this.component.calculate())
+            return true;
+        return false;
     }
 
     @Override
     public void addInputNode(INode newInputNode) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.inputNodes.add(newInputNode);
     }
 
     @Override
     public void addOutputNode(INode newOutputNode) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.outputNodes.add(newOutputNode);
     }
 }
