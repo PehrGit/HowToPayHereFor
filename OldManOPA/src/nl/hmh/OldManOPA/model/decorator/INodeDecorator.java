@@ -21,6 +21,8 @@ public class INodeDecorator implements INode{
     
     public INodeDecorator(Node component) {
         this.component = component;
+        inputNodes = new Vector<INode>();
+        outputNodes = new Vector<INode>();
     }
     
     @Override
