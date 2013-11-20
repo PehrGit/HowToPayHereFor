@@ -26,7 +26,7 @@ public class Circuit {
             String name = entry.getKey();
             int value = entry.getValue().calculate() ? 1: 0;
             
-            System.out.println("Probe '" + name + "\t=" + value);
+            System.out.println("Probe '" + name + "'\t=" + value);
         }
     }
 }
