@@ -21,7 +21,7 @@ public class INodeConcreteDecorator extends INodeDecorator {
     }
     
     void writeResult(){
-        
+        System.out.println(this.component);
     }
     
     @Override
