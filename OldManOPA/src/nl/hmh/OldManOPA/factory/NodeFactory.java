@@ -19,13 +19,17 @@ import nl.hmh.OldManOPA.model.decorator.INodeConcreteDecorator;
  */
 public class NodeFactory {
 
-	public INode produceNode(String type, boolean value) {
+	public INode produceNode(String type) {
 		IStrategy strategy = null;
 		
 		switch (type.toUpperCase()) {
-			case "INPUT":
+			case "INPUT_LOW":
 				strategy = new Input();
-				((Input) strategy).setValue(value);
+				((Input) strategy).setValue(false);
+			break;
+			case "INPUT_HIGH":
+				strategy = new Input();
+				((Input) strategy).setValue(true);
 			break;
 			case "AND":
 				strategy = new AND();
