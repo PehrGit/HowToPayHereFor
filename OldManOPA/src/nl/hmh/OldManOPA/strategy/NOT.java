@@ -18,7 +18,10 @@ public class NOT implements IStrategy {
 
 	@Override
 	public boolean calculate(Vector<INode> inputNodes) {
-		throw new UnsupportedOperationException("Not supported yet.");
+		if (inputNodes.size() == 0)
+			throw new IndexOutOfBoundsException("[NOT] The size of the input cannot be zero.");
+
+		return !inputNodes.get(0).calculate();
 	}
     
 }

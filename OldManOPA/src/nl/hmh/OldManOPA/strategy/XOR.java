@@ -18,7 +18,21 @@ public class XOR implements IStrategy {
 
 	@Override
 	public boolean calculate(Vector<INode> inputNodes) {
-		return false; // TODO : Implement this for multiple nodes
+		boolean result[] = new boolean[2];
+
+		for (int i = 0; i < inputNodes.size(); i++) {
+			if (inputNodes.get(i).calculate()) {
+				result[0] = true;
+			}
+			else {
+				result[1] = true;
+			}
+
+			// Check if both values have already been seen
+			if (result[0] && result[1]) return true;
+		}
+
+		return false;
 	}
     
 }

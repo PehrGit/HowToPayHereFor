@@ -18,8 +18,7 @@ public class Probe implements IStrategy {
 
 	@Override
 	public boolean calculate(Vector<INode> inputNodes) {
-		//throw new UnsupportedOperationException("Not supported yet.");
-            return inputNodes.elementAt(0).calculate();
+		return inputNodes.get(0).calculate();
 	}
     
 }
