@@ -8,6 +8,7 @@ package nl.hmh.OldManOPA.model.decorator;
 
 import java.util.Vector;
 import nl.hmh.OldManOPA.model.INode;
+import nl.hmh.OldManOPA.model.Node;
 
 /**
  *
@@ -15,7 +16,10 @@ import nl.hmh.OldManOPA.model.INode;
  */
 public class INodeConcreteDecorator extends INodeDecorator {
 
-   
+    public INodeConcreteDecorator(Node component) {
+        super(component);
+    }
+    
     void writeResult(){
         
     }

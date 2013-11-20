@@ -8,6 +8,7 @@ package nl.hmh.OldManOPA.model.decorator;
 
 import java.util.Vector;
 import nl.hmh.OldManOPA.model.INode;
+import nl.hmh.OldManOPA.model.Node;
 /**
  *
  * @author Pehr
@@ -15,6 +16,10 @@ import nl.hmh.OldManOPA.model.INode;
 public class INodeDecorator implements INode{
 
     public INode component;
+    
+    public INodeDecorator(Node component) {
+        this.component = component;
+    }
     
     @Override
     public boolean calculate() {
