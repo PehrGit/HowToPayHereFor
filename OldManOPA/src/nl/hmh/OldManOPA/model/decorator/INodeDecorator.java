@@ -16,13 +16,11 @@ import nl.hmh.OldManOPA.model.Node;
 public class INodeDecorator implements INode{
 
     public INode component;
-    Vector<INode> inputNodes;
-    Vector<INode> outputNodes;
+//    Vector<INode> inputNodes;
+//    Vector<INode> outputNodes;
     
     public INodeDecorator(Node component) {
         this.component = component;
-        inputNodes = new Vector<INode>();
-        outputNodes = new Vector<INode>();
     }
     
     @Override
@@ -34,11 +32,11 @@ public class INodeDecorator implements INode{
 
     @Override
     public void addInputNode(INode newInputNode) {
-        this.inputNodes.add(newInputNode);
+        this.component.addInputNode(newInputNode);
     }
 
     @Override
     public void addOutputNode(INode newOutputNode) {
-        this.outputNodes.add(newOutputNode);
+        this.component.addOutputNode(newOutputNode);
     }
 }

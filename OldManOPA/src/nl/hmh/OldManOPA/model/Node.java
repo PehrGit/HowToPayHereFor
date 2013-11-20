@@ -20,6 +20,8 @@ public class Node implements INode{
     
     public Node(IStrategy strategy) {
         this.strategy = strategy;
+        inputNodes = new Vector<INode>();
+        outputNodes = new Vector<INode>();
     }
     
     public boolean calculate() {
