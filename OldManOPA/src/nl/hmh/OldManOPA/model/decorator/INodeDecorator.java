@@ -16,6 +16,8 @@ import nl.hmh.OldManOPA.model.Node;
 public class INodeDecorator implements INode{
 
     public INode component;
+    Vector<INode> inputNodes;
+    Vector<INode> outputNodes;
     
     public INodeDecorator(Node component) {
         this.component = component;

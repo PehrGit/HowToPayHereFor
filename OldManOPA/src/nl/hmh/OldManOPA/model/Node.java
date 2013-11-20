@@ -15,6 +15,8 @@ import java.util.Vector;
 public class Node implements INode{
     
     IStrategy strategy;
+    Vector<INode> inputNodes;
+    Vector<INode> outputNodes;
     
     public Node(IStrategy strategy) {
         this.strategy = strategy;

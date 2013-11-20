@@ -13,8 +13,6 @@ import java.util.Vector;
  * @author Pehr
  */
 public interface INode {
-    public Vector<INode> inputNodes = null;
-    public Vector<INode> outputNodes = null;
     
     boolean calculate();
     void addInputNode(INode newInputNode);
