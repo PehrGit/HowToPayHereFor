@@ -17,7 +17,7 @@ public class INodeDecorator implements INode{
     public INode component;
     
     @Override
-    public boolean calculate(Vector<INode> inputNodes) {
+    public boolean calculate() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -30,5 +30,4 @@ public class INodeDecorator implements INode{
     public void addOutputNode(INode newOutputNode) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }

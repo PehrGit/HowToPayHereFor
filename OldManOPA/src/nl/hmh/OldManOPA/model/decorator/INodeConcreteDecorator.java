@@ -21,7 +21,7 @@ public class INodeConcreteDecorator extends INodeDecorator {
     }
     
     @Override
-    public boolean calculate(Vector<INode> inputNodes) {
+    public boolean calculate() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

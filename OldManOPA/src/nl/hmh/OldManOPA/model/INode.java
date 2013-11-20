@@ -16,7 +16,7 @@ public interface INode {
     public Vector<INode> inputNodes = null;
     Vector<INode> outputNodes = null;
     
-    boolean calculate(Vector<INode> inputNodes);
+    boolean calculate();
     void addInputNode(INode newInputNode);
     void addOutputNode(INode newOutputNode);
     

@@ -14,12 +14,12 @@ import java.util.Vector;
  */
 public class Node implements INode{
     
+    
     public Node(IStrategy strategy) {
         
     }
     
-    @Override
-    public boolean calculate(Vector<INode> inputNodes) {
+    public boolean calculate() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
