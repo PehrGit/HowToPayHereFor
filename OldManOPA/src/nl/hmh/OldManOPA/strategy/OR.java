@@ -6,10 +6,23 @@
 
 package nl.hmh.OldManOPA.strategy;
 
+import java.util.Vector;
+import nl.hmh.OldManOPA.model.INode;
+import nl.hmh.OldManOPA.model.IStrategy;
+
 /**
  *
- * @author Pehr
+ * @author Steven
  */
-public class OR {
+public class OR implements IStrategy {
+
+	@Override
+	public boolean calculate(Vector<INode> inputNodes) {
+		for (int i = 0; i < inputNodes.size(); i++) {
+			if (inputNodes.get(i).calculate()) return true;
+		}
+
+		return false;
+	}
     
 }

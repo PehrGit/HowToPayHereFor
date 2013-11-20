@@ -6,10 +6,19 @@
 
 package nl.hmh.OldManOPA.strategy;
 
+import java.util.Vector;
+import nl.hmh.OldManOPA.model.INode;
+import nl.hmh.OldManOPA.model.IStrategy;
+
 /**
  *
- * @author Pehr
+ * @author Steven
  */
-public class Probe {
+public class Probe implements IStrategy {
+
+	@Override
+	public boolean calculate(Vector<INode> inputNodes) {
+		throw new UnsupportedOperationException("Not supported yet.");
+	}
     
 }

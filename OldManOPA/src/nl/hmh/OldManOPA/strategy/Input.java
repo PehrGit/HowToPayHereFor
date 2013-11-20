@@ -6,10 +6,26 @@
 
 package nl.hmh.OldManOPA.strategy;
 
+import java.util.Vector;
+import nl.hmh.OldManOPA.model.INode;
+import nl.hmh.OldManOPA.model.IStrategy;
+
 /**
  *
- * @author Pehr
+ * @author Steven
  */
-public class Input {
+public class Input implements IStrategy {
+
+	private boolean value;
+
+	public void setValue(boolean value)
+	{
+		this.value = value;
+	}
+
+	@Override
+	public boolean calculate(Vector<INode> inputNodes) {
+		return this.value;
+	}
     
 }

@@ -6,10 +6,14 @@
 
 package nl.hmh.OldManOPA.model;
 
+import java.util.Vector;
+
 /**
  *
- * @author Pehr
+ * @author Steven
  */
 public interface IStrategy {
-    
+
+    boolean calculate(Vector<INode> inputNodes);
+
 }
