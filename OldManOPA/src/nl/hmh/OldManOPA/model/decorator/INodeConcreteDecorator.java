@@ -20,13 +20,15 @@ public class INodeConcreteDecorator extends INodeDecorator {
         super(component);
     }
     
-    void writeResult(){
-        System.out.println(this.component);
+    void writeResult(boolean result){
+        System.out.println((result ? "true \n" : "false \n"));
     }
     
     @Override
     public boolean calculate() {
-        if(this.component.calculate())
+        boolean result = this.component.calculate();
+        writeResult(result);
+        if(result)
             return true;
         return false;
     }
