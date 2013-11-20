@@ -33,10 +33,13 @@ public class Main {
                 System.out.println("Geef path van bestand");
                 
                 String s = bufferRead.readLine();
-
+                //test
+                //String s = "D:\\circuit5.txt";
                 if(s.equals("exit")){
                     System.out.println("Goodbye");
                     System.exit(0);
+                    //test
+                    throw new IOException();
                 }
                 else{
                     File f = new File(s);
@@ -44,7 +47,7 @@ public class Main {
                     Circuit circuit = fileParser.parseFile(f);
                     circuit.startCircuit();
                 }
-            } catch (IOException ex) {
+            } catch (Exception ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                 System.exit(1);
             }
