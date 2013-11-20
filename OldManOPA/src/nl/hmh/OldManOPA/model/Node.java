@@ -40,4 +40,9 @@ public class Node implements INode{
         this.outputNodes.add(newOutputNode);
     }
     
+    public IStrategy getStrategy()
+    {
+        return strategy;
+    }
+    
 }
