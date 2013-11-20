@@ -6,10 +6,18 @@
 
 package nl.hmh.OldManOPA.model;
 
+import java.util.Vector;
+
 /**
  *
  * @author Pehr
  */
 public interface INode {
+    public Vector<INode> inputNodes = null;
+    Vector<INode> outputNodes = null;
+    
+    boolean calculate(Vector<INode> inputNodes);
+    void addInputNode(INode newInputNode);
+    void addOutputNode(INode newOutputNode);
     
 }

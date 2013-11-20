@@ -6,10 +6,23 @@
 
 package nl.hmh.OldManOPA.model.decorator;
 
+import java.util.Vector;
+import nl.hmh.OldManOPA.model.INode;
+
 /**
  *
  * @author Pehr
  */
-public class INodeConcreteDecorator {
+public class INodeConcreteDecorator extends INodeDecorator {
+
+   
+    void writeResult(){
+        
+    }
+    
+    @Override
+    public boolean calculate(Vector<INode> inputNodes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

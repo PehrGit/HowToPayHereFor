@@ -6,10 +6,31 @@
 
 package nl.hmh.OldManOPA.model;
 
+import java.util.Vector;
+
 /**
  *
  * @author Pehr
  */
-public class Node {
+public class Node implements INode{
+    
+    public Node(IStrategy strategy) {
+        
+    }
+    
+    @Override
+    public boolean calculate(Vector<INode> inputNodes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void addInputNode(INode newInputNode) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void addOutputNode(INode newOutputNode) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
