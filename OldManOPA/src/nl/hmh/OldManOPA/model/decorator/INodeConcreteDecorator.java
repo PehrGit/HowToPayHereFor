@@ -22,7 +22,7 @@ public class INodeConcreteDecorator extends INodeDecorator {
     }
     
     void writeResult(boolean result){
-        String className = component.getClass().getName();
+        //String className = component.getClass().getName();
         IStrategy strat = ((Node)component).getStrategy();
         String stratname = strat.getClass().getSimpleName();
         
