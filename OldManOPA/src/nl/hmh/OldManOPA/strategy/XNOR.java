@@ -14,19 +14,19 @@ import nl.hmh.OldManOPA.model.Strategy;
  *
  * @author Steven
  */
-public class XOR extends Strategy {
+public class XNOR extends Strategy {
 
 	/*** Start of Singleton implementation ***/
 
-	private static XOR instance = new XOR("XOR");
+	private static XNOR instance = new XNOR("XNOR");
 
-	private static XOR getInstance() {
+	private static XNOR getInstance() {
 		return instance;
 	}
 
 	/*** End of Singleton implementation ***/
 
-	private XOR(String ID) {
+	private XNOR(String ID) {
 		super(ID);
 	}
 
@@ -43,10 +43,10 @@ public class XOR extends Strategy {
 			}
 
 			// Check if both values have already been seen
-			if (result[0] && result[1]) return true;
+			if (result[0] && result[1]) return false;
 		}
 
-		return false;
+		return true;
 	}
     
 }

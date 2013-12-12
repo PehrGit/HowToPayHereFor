@@ -8,19 +8,28 @@ package nl.hmh.OldManOPA.strategy;
 
 import java.util.Vector;
 import nl.hmh.OldManOPA.model.INode;
-import nl.hmh.OldManOPA.model.IStrategy;
+import nl.hmh.OldManOPA.model.Strategy;
 
 /**
  *
  * @author Steven
  */
-public class Input implements IStrategy {
+public class INPUT_LOW extends Strategy {
 
-	private boolean value;
+	/*** Start of Singleton implementation ***/
 
-	public void setValue(boolean value)
-	{
-		this.value = value;
+	private static INPUT_LOW instance = new INPUT_LOW("INPUT_LOW");
+
+	private static INPUT_LOW getInstance() {
+		return instance;
+	}
+
+	/*** End of Singleton implementation ***/
+
+	private boolean value = true;
+
+	private INPUT_LOW(String ID) {
+		super(ID);
 	}
 
 	@Override

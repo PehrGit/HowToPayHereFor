@@ -14,39 +14,27 @@ import nl.hmh.OldManOPA.model.Strategy;
  *
  * @author Steven
  */
-public class XOR extends Strategy {
+public class INPUT_HIGH extends Strategy {
 
 	/*** Start of Singleton implementation ***/
 
-	private static XOR instance = new XOR("XOR");
+	private static INPUT_HIGH instance = new INPUT_HIGH("INPUT_HIGH");
 
-	private static XOR getInstance() {
+	private static INPUT_HIGH getInstance() {
 		return instance;
 	}
 
 	/*** End of Singleton implementation ***/
 
-	private XOR(String ID) {
+	private boolean value = true;
+
+	private INPUT_HIGH(String ID) {
 		super(ID);
 	}
 
 	@Override
 	public boolean calculate(Vector<INode> inputNodes) {
-		boolean result[] = new boolean[2];
-
-		for (int i = 0; i < inputNodes.size(); i++) {
-			if (inputNodes.get(i).calculate()) {
-				result[0] = true;
-			}
-			else {
-				result[1] = true;
-			}
-
-			// Check if both values have already been seen
-			if (result[0] && result[1]) return true;
-		}
-
-		return false;
+		return this.value;
 	}
     
 }

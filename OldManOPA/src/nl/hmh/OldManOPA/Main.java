@@ -17,9 +17,14 @@ import nl.hmh.OldManOPA.model.Circuit;
 
 /**
  *
- * @author Pehr
+ * @author Steven
  */
 public class Main {
+	/**
+	 * This method makes sure there cannot occure a infinity loop.
+	 */
+	public static final int MAX_ENTRIES = 1000;
+
     /**
      * @param args the command line arguments
      */

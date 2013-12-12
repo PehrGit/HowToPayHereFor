@@ -8,7 +8,7 @@ package nl.hmh.OldManOPA.model.decorator;
 
 import java.util.Vector;
 import nl.hmh.OldManOPA.model.INode;
-import nl.hmh.OldManOPA.model.IStrategy;
+import nl.hmh.OldManOPA.model.Strategy;
 import nl.hmh.OldManOPA.model.Node;
 
 /**
@@ -23,7 +23,7 @@ public class INodeConcreteDecorator extends INodeDecorator {
     
     void writeResult(boolean result){
         //String className = component.getClass().getName();
-        IStrategy strat = ((Node)component).getStrategy();
+        Strategy strat = ((Node)component).getStrategy();
         String stratname = strat.getClass().getSimpleName();
         
         System.out.print(stratname + "\t=");

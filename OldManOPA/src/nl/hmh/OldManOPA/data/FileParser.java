@@ -23,12 +23,11 @@ import nl.hmh.OldManOPA.model.INode;
  */
 public class FileParser {
 
-    private NodeFactory nodeFactory;
     private static FileParser instance = null;
 
-    protected FileParser() {
-        nodeFactory = new NodeFactory();
-    }
+	private FileParser() {
+		// Empty constructor
+	}
 
     public static FileParser getInstance() {
         if (instance == null) {
@@ -74,7 +73,7 @@ public class FileParser {
 
         //Either add to nodes or
         if (Arrays.asList(Constants.operators).contains(nodeDescription)) {
-            INode node = nodeFactory.produceNode(nodeDescription);
+            INode node = NodeFactory.produceNode(nodeDescription);
             nodes.put(nodeName, node);
             if(nodeDescription.equals("PROBE"))
                 probes.put(nodeName, node);

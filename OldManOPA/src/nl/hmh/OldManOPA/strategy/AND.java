@@ -8,13 +8,27 @@ package nl.hmh.OldManOPA.strategy;
 
 import java.util.Vector;
 import nl.hmh.OldManOPA.model.INode;
-import nl.hmh.OldManOPA.model.IStrategy;
+import nl.hmh.OldManOPA.model.Strategy;
 
 /**
  *
  * @author Steven
  */
-public class AND implements IStrategy {
+public class AND extends Strategy {
+
+	/*** Start of Singleton implementation ***/
+
+	private static AND instance = new AND("AND");
+
+	private static AND getInstance() {
+		return instance;
+	}
+
+	/*** End of Singleton implementation ***/
+
+	private AND(String ID) {
+		super(ID);
+	}
 
 	@Override
 	public boolean calculate(Vector<INode> inputNodes) {

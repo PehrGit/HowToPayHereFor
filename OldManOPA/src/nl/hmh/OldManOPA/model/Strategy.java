@@ -7,13 +7,18 @@
 package nl.hmh.OldManOPA.model;
 
 import java.util.Vector;
+import nl.hmh.OldManOPA.factory.NodeFactory;
 
 /**
  *
  * @author Steven
  */
-public interface IStrategy {
+public abstract class Strategy {
 
-    boolean calculate(Vector<INode> inputNodes);
+	protected Strategy(String ID) {
+		NodeFactory.assign(ID, this);
+	}
+
+    public abstract boolean calculate(Vector<INode> inputNodes);
 
 }

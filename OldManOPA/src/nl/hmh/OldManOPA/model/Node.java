@@ -12,20 +12,20 @@ import java.util.Vector;
  *
  * @author Pehr
  */
-public class Node implements INode{
+public class Node implements INode {
     
-    IStrategy strategy;
+    Strategy strategy;
     Vector<INode> inputNodes;
     Vector<INode> outputNodes;
     
-    public Node(IStrategy strategy) {
+    public Node(Strategy strategy) {
         this.strategy = strategy;
         inputNodes = new Vector<INode>();
         outputNodes = new Vector<INode>();
     }
     
     public boolean calculate() {
-        if(this.strategy.calculate(this.inputNodes))
+		if(this.strategy.calculate(this.inputNodes))
             return true;
         return false;
     }
@@ -40,7 +40,7 @@ public class Node implements INode{
         this.outputNodes.add(newOutputNode);
     }
     
-    public IStrategy getStrategy()
+    public Strategy getStrategy()
     {
         return strategy;
     }

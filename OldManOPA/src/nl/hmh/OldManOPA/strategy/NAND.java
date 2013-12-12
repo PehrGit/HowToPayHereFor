@@ -8,13 +8,27 @@ package nl.hmh.OldManOPA.strategy;
 
 import java.util.Vector;
 import nl.hmh.OldManOPA.model.INode;
-import nl.hmh.OldManOPA.model.IStrategy;
+import nl.hmh.OldManOPA.model.Strategy;
 
 /**
  *
  * @author Steven
  */
-public class NAND implements IStrategy {
+public class NAND extends Strategy {
+
+	/*** Start of Singleton implementation ***/
+
+	private static NAND instance = new NAND("NAND");
+
+	private static NAND getInstance() {
+		return instance;
+	}
+
+	/*** End of Singleton implementation ***/
+
+	private NAND(String ID) {
+		super(ID);
+	}
 
 	@Override
 	public boolean calculate(Vector<INode> inputNodes) {

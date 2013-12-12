@@ -8,13 +8,27 @@ package nl.hmh.OldManOPA.strategy;
 
 import java.util.Vector;
 import nl.hmh.OldManOPA.model.INode;
-import nl.hmh.OldManOPA.model.IStrategy;
+import nl.hmh.OldManOPA.model.Strategy;
 
 /**
  *
  * @author Steven
  */
-public class NOR implements IStrategy {
+public class NOR extends Strategy {
+
+	/*** Start of Singleton implementation ***/
+
+	private static NOR instance = new NOR("NOR");
+
+	private static NOR getInstance() {
+		return instance;
+	}
+
+	/*** End of Singleton implementation ***/
+
+	private NOR(String ID) {
+		super(ID);
+	}
 
 	@Override
 	public boolean calculate(Vector<INode> inputNodes) {
