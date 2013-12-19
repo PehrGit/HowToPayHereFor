@@ -7,10 +7,8 @@ package nl.hmh.OldManOPA.data;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map.Entry;
 import java.util.Scanner;
 import nl.hmh.OldManOPA.factory.NodeFactory;
 import nl.hmh.OldManOPA.model.Circuit;
