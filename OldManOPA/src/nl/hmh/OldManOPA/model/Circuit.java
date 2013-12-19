@@ -16,15 +16,23 @@ import java.util.Vector;
 public class Circuit {
 
     HashMap<String, INode> probes;
+    
+    int size;
+    
+    public int GetSize()
+    {
+        return size;
+    }
 
-    public Circuit(HashMap<String, INode> probes) {
+    public Circuit(HashMap<String, INode> probes, int size) {
         this.probes = probes;
+        this.size = size;
     }
 
     public void startCircuit() {
         for(Entry<String, INode> entry: probes.entrySet()){
             String name = entry.getKey();
-            int value = entry.getValue().calculate() ? 1: 0;
+            int value = entry.getValue().calculate(size) ? 1: 0;
             
             System.out.println("Probe '" + name + "'\t=" + value);
         }

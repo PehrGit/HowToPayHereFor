@@ -26,14 +26,14 @@ public class INPUT_LOW extends Strategy {
 
 	/*** End of Singleton implementation ***/
 
-	private boolean value = true;
+	private boolean value = false;
 
 	private INPUT_LOW(String ID) {
 		super(ID);
 	}
 
 	@Override
-	public boolean calculate(Vector<INode> inputNodes) {
+	public boolean calculate(Vector<INode> inputNodes, int iter) {
 		return this.value;
 	}
     

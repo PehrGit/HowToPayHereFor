@@ -49,7 +49,7 @@ public class FileParser {
                     parseLine(line, nodes, probes);
                 }
             }
-            Circuit circuit = new Circuit(probes);
+            Circuit circuit = new Circuit(probes, nodes.size());
             return circuit;
         } catch (Exception e) {
             System.out.println("ERROR: " + e.getMessage());

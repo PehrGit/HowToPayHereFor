@@ -31,9 +31,9 @@ public class NAND extends Strategy {
 	}
 
 	@Override
-	public boolean calculate(Vector<INode> inputNodes) {
+	public boolean calculate(Vector<INode> inputNodes, int iter) {
 		for (int i = 0; i < inputNodes.size(); i++) {
-			if (!inputNodes.get(i).calculate()) return true;
+			if (!inputNodes.get(i).calculate(iter)) return true;
 		}
 
 		return false;

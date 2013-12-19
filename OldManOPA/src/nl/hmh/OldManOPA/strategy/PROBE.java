@@ -31,8 +31,8 @@ public class PROBE extends Strategy {
 	}
 
 	@Override
-	public boolean calculate(Vector<INode> inputNodes) {
-		return inputNodes.get(0).calculate();
+	public boolean calculate(Vector<INode> inputNodes, int iter) {
+		return inputNodes.get(0).calculate(iter);
 	}
     
 }

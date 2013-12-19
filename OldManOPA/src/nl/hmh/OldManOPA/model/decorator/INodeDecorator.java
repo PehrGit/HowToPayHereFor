@@ -24,10 +24,11 @@ public class INodeDecorator implements INode{
     }
     
     @Override
-    public boolean calculate() {
-        if(this.component.calculate())
+    public boolean calculate(int iter) {
+        if(this.component.calculate(iter))
             return true;
         return false;
+        
     }
 
     @Override

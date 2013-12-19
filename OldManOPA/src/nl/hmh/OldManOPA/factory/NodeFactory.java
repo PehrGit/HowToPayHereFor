@@ -53,7 +53,7 @@ public class NodeFactory {
 
 	private void initialize() {
 		//String dir = getClassLocation();
-		String dir = "C:/Users/Steven/Documents/GitHub/HowToPayHereFor/OldManOPA/build/classes/nl/hmh/OldManOPA/strategy";
+		String dir = "D:/Documents/GitHub/HowToPayHereFor/OldManOPA/build/classes/nl/hmh/OldManOPA/strategy";
 
 		try {
             File           cFile   = new File(dir);

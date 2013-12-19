@@ -31,11 +31,11 @@ public class XOR extends Strategy {
 	}
 
 	@Override
-	public boolean calculate(Vector<INode> inputNodes) {
+	public boolean calculate(Vector<INode> inputNodes, int iter) {
 		boolean result[] = new boolean[2];
 
 		for (int i = 0; i < inputNodes.size(); i++) {
-			if (inputNodes.get(i).calculate()) {
+			if (inputNodes.get(i).calculate(iter)) {
 				result[0] = true;
 			}
 			else {

@@ -14,7 +14,7 @@ import java.util.Vector;
  */
 public interface INode {
     
-    boolean calculate();
+    boolean calculate(int iter);
     void addInputNode(INode newInputNode);
     void addOutputNode(INode newOutputNode);
     

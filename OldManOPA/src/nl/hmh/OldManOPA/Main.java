@@ -50,7 +50,17 @@ public class Main {
                     File f = new File(s);
                     if(f.exists() && !f.isDirectory()) { /* do something */ }
                     Circuit circuit = fileParser.parseFile(f);
+                    try{
                     circuit.startCircuit();
+                    }
+                    catch(ArithmeticException e)
+                    {
+                        System.out.println("");
+                        System.out.println("Error: ");
+                        System.out.println(e.getMessage());
+                        
+                    }
+                    System.out.println("");
                 }
             } catch (Exception ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);

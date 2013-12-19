@@ -24,10 +24,15 @@ public class Node implements INode {
         outputNodes = new Vector<INode>();
     }
     
-    public boolean calculate() {
-		if(this.strategy.calculate(this.inputNodes))
-            return true;
+    public boolean calculate(int iter) {
+        if(iter > 0){
+		if(this.strategy.calculate(this.inputNodes, --iter))
+            return true;      
         return false;
+        }
+        else{
+            throw new ArithmeticException("Loop detected");       
+        }
     }
 
     @Override

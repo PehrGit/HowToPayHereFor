@@ -19,6 +19,6 @@ public abstract class Strategy {
 		NodeFactory.assign(ID, this);
 	}
 
-    public abstract boolean calculate(Vector<INode> inputNodes);
+    public abstract boolean calculate(Vector<INode> inputNodes, int iter);
 
 }

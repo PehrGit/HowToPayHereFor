@@ -31,8 +31,9 @@ public class INodeConcreteDecorator extends INodeDecorator {
     }
     
     @Override
-    public boolean calculate() {
-        boolean result = this.component.calculate();
+    public boolean calculate(int iter) {
+        //hier hoeft iter niet opgehoogd te worden, dat doet INodeDecorator zelf
+        boolean result = this.component.calculate(iter);
         writeResult(result);
         if(result)
             return true;

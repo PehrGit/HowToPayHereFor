@@ -33,7 +33,7 @@ public class INPUT_HIGH extends Strategy {
 	}
 
 	@Override
-	public boolean calculate(Vector<INode> inputNodes) {
+	public boolean calculate(Vector<INode> inputNodes, int iter) {
 		return this.value;
 	}
     

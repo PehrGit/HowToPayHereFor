@@ -31,11 +31,11 @@ public class NOT extends Strategy {
 	}
 
 	@Override
-	public boolean calculate(Vector<INode> inputNodes) {
+	public boolean calculate(Vector<INode> inputNodes, int iter) {
 		if (inputNodes.size() == 0)
 			throw new IndexOutOfBoundsException("[NOT] The size of the input cannot be zero.");
 
-		return !inputNodes.get(0).calculate();
+		return !inputNodes.get(0).calculate(iter);
 	}
     
 }
