@@ -52,8 +52,7 @@ public class NodeFactory {
 	}
 
 	private void initialize() {
-		//String dir = getClassLocation();
-		String dir = "D:/Documents/GitHub/HowToPayHereFor/OldManOPA/build/classes/nl/hmh/OldManOPA/strategy";
+		String dir = getClassLocation();
 
 		try {
             File           cFile   = new File(dir);
@@ -104,23 +103,6 @@ public class NodeFactory {
             // 'cs' can be null depending on the classloader behavior:
             if (cs != null)
                 result = cs.getLocation();
-
-            if (result != null) {
-                // Convert a code source location into a full class file location
-                // for some common cases:
-                if (result.getProtocol().equals("file")) {
-                    try {
-                        if (result.toExternalForm().endsWith(".jar") || result.toExternalForm().endsWith(".zip")) {
-                            result = new URL("jar:".concat(result.toExternalForm()).concat("!/").concat (clsAsResource));
-                        }
-						else {
-                            if (new File(result.getFile()).isDirectory())
-                                result = new URL (result, clsAsResource);
-                        }
-                    }
-                    catch (MalformedURLException ignore) {}
-                }
-            }
         }
 
         if (result == null) {
